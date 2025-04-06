@@ -1,0 +1,10 @@
+<launch>
+    <!-- Find the path to the UR3e URDF file -->
+    <include file="/root/catkin_ws/src/Docker/universal_robot/ur_e_description/launch/ur3e_upload.launch" />
+
+    <!-- Start the trackit_jacobian node -->
+    <node name="trackit_jacobian" pkg="trackit_jacobian" type="trackit_jacobian" output="screen" />
+
+    <!-- Publish fake joint states for testing -->
+    <node name="test_trackit_jacobian" pkg="trackit_jacobian" type="test_trackit_jacobian" output="screen" />
+</launch>
