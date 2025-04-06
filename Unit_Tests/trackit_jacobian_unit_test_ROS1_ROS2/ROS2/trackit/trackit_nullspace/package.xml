@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>trackit_nullspace</name>
+  <version>0.0.0</version>
+  <description>The trackit_nullspace package</description>
+
+  <maintainer email="richardo.khonasty@uts.edu.au">Richardo Khonasty</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>trackit_msgs</depend>
+
+  <export>
+  <build_type>ament_cmake</build_type>
+  </export>
+</package>

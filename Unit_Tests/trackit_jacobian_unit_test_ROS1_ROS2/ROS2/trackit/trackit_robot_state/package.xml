@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>trackit_robot_state</name>
+  <version>0.0.0</version>
+  <description>The trackit_robot_state package</description>
+
+  <maintainer email="anthony.g.biscotto@student.uts.edu.au">Anthony Biscotto</maintainer>
+  <license>MIT</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Core dependencies -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>kdl_parser</depend>
+  <depend>urdf</depend>
+  <depend>trackit_msgs</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+
+  <!-- Export to declare it as an ament package -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

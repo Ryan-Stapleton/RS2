@@ -1,0 +1,9 @@
+float32 sigma_singular_lin_0
+float32 sigma_singular_lin_1
+float32 sigma_not_singular_lin_0
+float32 sigma_not_singular_lin_1
+
+float32 sigma_singular_ang_0
+float32 sigma_singular_ang_1
+float32 sigma_not_singular_ang_0
+float32 sigma_not_singular_ang_1
