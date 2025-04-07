@@ -31,8 +31,7 @@
     # rosdep install --from-paths src --ignore-src -r -y
     
 # To Run trackit_core Unit Tests (In Container):
-    # rosrun trackit_core trackit_idk
-    # rosrun trackit_core test_trackit_idk
+    # roslaunch trackit_core test_trackit_idk.launch
 
 # To Run trackit_jacobian Unit Tests (In Container):
     # roslaunch trackit_jacobian test_trackit_jacobian.launch

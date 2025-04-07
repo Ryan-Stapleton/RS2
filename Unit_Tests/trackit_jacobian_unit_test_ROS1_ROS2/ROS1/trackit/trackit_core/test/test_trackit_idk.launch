@@ -1,0 +1,10 @@
+<launch>
+    <!-- Include the test_trackit_jacobian.launch file from trackit_jacobian -->
+    <include file="$(find trackit_jacobian)/test/test_trackit_jacobian.launch" />
+
+    <!-- Start the trackit_idk node -->
+    <node name="trackit_idk" pkg="trackit_core" type="trackit_idk" output="screen" />
+
+    <!-- Publish fake joint states for testing -->
+    <node name="test_trackit_idk" pkg="trackit_core" type="test_trackit_idk" output="screen" />
+</launch>

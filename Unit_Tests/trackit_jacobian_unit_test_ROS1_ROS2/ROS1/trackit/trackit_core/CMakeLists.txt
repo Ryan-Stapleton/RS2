@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   trackit_msgs
+  urdf
 )
 
 find_package(Eigen3 REQUIRED)
@@ -37,13 +38,16 @@ add_executable(trackit_idk src/trackit_idk.cpp)
 add_dependencies(trackit_idk ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(trackit_idk ${catkin_LIBRARIES})
 
-if(CATKIN_ENABLE_TESTING)
-  catkin_add_gtest(test_trackit_idk
-    test/test_trackit_idk.cpp
-  )
-  # Link against the aggregator library (not the node)
-  target_link_libraries(test_trackit_idk
-    ${catkin_LIBRARIES}
-    ${GTEST_LIBRARIES}
-  )
-endif()
+add_executable(test_trackit_idk test/test_trackit_idk.cpp)
+target_link_libraries(test_trackit_idk ${catkin_LIBRARIES} ${GTEST_LIBRARIES} ${urdf_LIBRARIES})
+
+# if(CATKIN_ENABLE_TESTING)
+#   catkin_add_gtest(test_trackit_idk
+#     test/test_trackit_idk.cpp
+#   )
+#   # Link against the aggregator library (not the node)
+#   target_link_libraries(test_trackit_idk
+#     ${catkin_LIBRARIES}
+#     ${GTEST_LIBRARIES}
+#   )
+# endif()
